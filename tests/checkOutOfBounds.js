@@ -9,8 +9,8 @@ test('is checkOutOfBound working' , function(t){
   var copyBoard = populateBoard(board);
   var cell = [0, 4];
   var cell2 = [0, 0];
-  var checkOutOfBound = checkBound(cell, copyBoard);
-  var checkOutOfBound2 = checkBound(cell2, copyBoard);
+  var checkOutOfBound = checkBound(cell, size);
+  var checkOutOfBound2 = checkBound(cell2, size);
 
   t.equal(checkOutOfBound, true, "this cell is out of bound");
   t.equal(checkOutOfBound2, false, "this cell is not out of bound");
