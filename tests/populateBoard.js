@@ -3,7 +3,7 @@ var createBoard = require('../createBoard')
 var populateBoard = require('../populateBoard');
 
 test('is the boardCopy working?' , function(t){
-  var size = 5;
+  var size = 4;
   var board = createBoard(size);
   var copyBoard = populateBoard(board);
 

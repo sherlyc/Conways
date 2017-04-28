@@ -1,5 +1,4 @@
 var test = require('tape')
-
 var createBoard = require('../createBoard');
 
 test('createBoard returns board with the correct dimensions', function (t){
