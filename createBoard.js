@@ -4,7 +4,7 @@ function createBoard(size) {
   var my2dArray = (new Array(size)).fill(0).map(
                      function(){ return new Array(size).fill(false);}
                     );
-  console.log(board=my2dArray);
+  // console.log(board=my2dArray);
   return board = my2dArray;
 }
 
