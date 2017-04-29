@@ -8,9 +8,10 @@ var countAlive = 0;
 
   for (var i = -1; i <= 1; i++ ){
     for (var j = -1; j <= 1; j++ ){
-
-
-        if(!outOfBounds([ x + i , y + i ] , size ) && board [ x + i ][ y + j ] == true ){
+        if(i == 0 && j == 0 ){
+            continue;
+        }
+        if(!outOfBounds([ x + i , y + j ] , size ) && board [ x + i ][ y + j ] == true ){
             countAlive++
         };
     }
