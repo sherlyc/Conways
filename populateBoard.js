@@ -10,7 +10,6 @@ function populateBoard(board) {
       boardCopy[i][j]=randomBoolean;
     }
   }
-  console.log(boardCopy);
   return boardCopy
 }
 

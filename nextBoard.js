@@ -4,22 +4,18 @@ var countAliveNeighbours = require('./countAliveNeighbours')
 
 function nextBoard(currentBoard) {
 
-var board = [];
 var size = currentBoard.length
 var neighbourCount = 0;
+var board = [];
 
 for ( var i = 0; i < size; i++ ) {
+    board[i] = [];
     for ( var j = 0; j < size; j++ ) {
-        neighbourCount = countAliveNeighbours('['+i+']['+j+']', currentBoard)
-        console.log("#")
-        console.log(neighbourCount);
-        //nextCellState(board);
-        //board.push()
+        neighbourCount = countAliveNeighbours(i, j, currentBoard);
+        board[i].push(nextCellState(currentBoard[i][j], neighbourCount));
     }
 }
-
-
-//return board
+return board
 }
 
 module.exports = nextBoard

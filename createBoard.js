@@ -1,4 +1,4 @@
-function createBoard(size) {
+function createBoard (size) {
   var board = []
   //make 2d array
   var my2dArray = (new Array(size)).fill(0).map(

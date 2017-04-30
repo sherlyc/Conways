@@ -2,20 +2,23 @@ var test = require('tape')
 var createBoard = require('../createBoard');
 var nextBoard = require('../nextBoard')
 
+
+
+
 test('nextBoard', function (t) {
   (function() {
-    var board = createBoard(10)
+    var board = createBoard(4)
     var newBoard = nextBoard(board)
     t.not(newBoard, board, 'nextBoard returns a new array and not the array passed in')
   })()
   ;(function () {
-    var board = createBoard(10)
+    var board = createBoard(4)
     board[0][0] = true
     var newBoard = nextBoard(board)
     t.false(newBoard[0][0], 'Example one is correct')
   })()
   ;(function () {
-    var board = createBoard(10)
+    var board = createBoard(4)
     board[1][1] = true
     board[1][2] = true
     board[2][1] = true
@@ -27,7 +30,7 @@ test('nextBoard', function (t) {
     t.true(newBoard[1][2], 'Example two is correct')
   })()
   ;(function () {
-    var board = createBoard(10)
+    var board = createBoard(4)
     board[0][0] = true
     board[0][1] = true
     board[1][0] = true
